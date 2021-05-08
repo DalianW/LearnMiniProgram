@@ -1,3 +1,16 @@
 <!--pages/home/home.wxml-->
-<text class="title">home</text>
-<button size="mini">按钮</button>
+
+<!-- 1.小程序的数据绑定 {{}}-Mustache语法 -->
+<view>Hello {{name}}</view>
+<view>我的年龄：{{age}}</view>
+
+<!-- 2.列表展示 -->
+<view wx:for="{{students}}" wx:key="id">
+  <view>{{item.name}} - {{item.age}}</view>
+</view>
+
+<!-- 3. 事件监听 改变data -->
+
+<view>当前计数：{{counter}}</view>
+<button size="mini" bindtap="handleBtnClick">+</button>
+<button size="mini" bindtap="handleSubstaction">-</button>
